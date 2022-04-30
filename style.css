@@ -1,0 +1,1013 @@
+/* ----------- FONTS ----------- */
+/* Lato Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* Bodoni Moda Font */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* ----------- VARIABLES ----------- */
+:root {
+  --font1: "Bodoni Moda";
+  --font2: "Lato";
+  --color1: #cb99c8;
+  --color2: #4b4a79;
+  --color3: #5ac2cc;
+  --color4: #c3db88;
+  --color5: #d4e78d;
+  --black: #202020;
+  --grey: #939393;
+  --lightgrey: #e9e9e9;
+  --super-lightgrey: #fafafa;
+  --background: #f9f9f9;
+  --short-transition: .4s ease-in-out;
+  --long-transition: .6s ease-in-out;
+}
+
+/* ----------- GENERAL ----------- */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+html, html div {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  position: relative;
+  background: var(--background);
+  font-family: var(--font2);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--black);
+  font-weight: 400;
+  overflow: hidden;
+}
+
+/* ----------- TEXT STYLING ----------- */
+a {
+  text-decoration: none;
+}
+
+/* ----------- SIDEBAR ----------- */
+#po-sidebar {
+  width: 400px;
+  height: 100%;
+  position: relative;
+  background: conic-gradient(from 90deg at 70% 40%, var(--color1), var(--color4), var(--color3), var(--color1));
+  overflow: hidden;
+}
+
+#po-sidebar b {
+  color: white;
+}
+
+/* Blog Title */
+.po-title {
+  font-family: var(--font1);
+  font-size: 3.5em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: right;
+  position: absolute;
+  bottom: -13px;
+  right: -13px;
+}
+
+/* Menu Buttons */
+.po-menu {
+  width: 25%;
+  height: 35%;
+  font-size: 1.3em;
+  position: absolute;
+  left: 0;
+  top: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.po-menu a {
+  color: white;
+  border: 1px solid transparent;
+  padding: 6px 10px;
+  border-radius: 100%;
+  transition: var(--short-transition);
+}
+
+.po-menu a:hover {
+  border: 1px solid white;
+}
+
+#s-m-t-tooltip {
+  max-width: 300px;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin: 10px 20px;
+  color: white;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  background: var(--black);
+  z-index: 99999;
+}
+
+/* Sidebar Image */
+.po-sideimage {
+  width: 75%;
+  height: 35%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
+
+.po-sideimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+/* Searchbar */
+.po-search {
+  width: 70%;
+  position: absolute;
+  top: 45%;
+  left: 9%;
+}
+
+.po-search input {
+  width: 70%;
+  background: none;
+  border: 1px solid var(--black);
+  padding: 4px 7px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1em;
+  color: inherit;
+}
+
+.po-search input::before {
+  content: '\ec5f';
+  font-family: 'cappuccicons';
+  color: inherit;
+  font-size: 2em;
+}
+
+.po-search input::placeholder {
+  color: inherit;
+}
+
+/* Sidebar Quote */
+#po-sidequote {
+  position: absolute;
+  right: 20%;
+  top: 34%;
+}
+
+/* Blog Description */
+.po-sidescrip {
+  width: 82%;
+  height: 19%;
+  padding-right: 10px;
+  overflow-y: auto;
+  position: absolute;
+  left: 9%;
+  top: 53%;
+}
+
+.po-sidescrip::-webkit-scrollbar {
+  width: 2px;
+}
+
+.po-sidescrip::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.po-sidescrip::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+/* Special Link */
+.pido-link {
+  width: auto;
+  height: auto;
+  position: absolute;
+  font-size: 1.7em;
+  bottom: 12%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pido-link a {
+  color: white;
+  background: var(--black);
+  padding: 10px 14px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  transition: var(--short-transition);
+}
+
+.pido-link a:hover {
+  transform: scale(1.2);
+  background: conic-gradient(from -90deg at 37% 40%, var(--color1), var(--color4), var(--color3), var(--color1));
+  border: 2px solid white;
+}
+
+/* ----------- ABOUT ----------- */
+.tabzcon {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: conic-gradient(from 90deg at 70% 40%, var(--color1), var(--color4), var(--color3), var(--color1));
+}
+
+.tabzclose {
+  font-size: 1em;
+  padding: 5px;
+  color: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tabzclose:before {
+  content: '\ea3c';
+  font-family: 'cappuccicons';
+}
+
+.tabzclose:hover {
+  cursor: pointer;
+}
+
+#po-about {
+  overflow: hidden;
+}
+
+.po-about-underpage {
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.po-about-title {
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-size: 2.4em;
+  letter-spacing: -0.06em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3%;
+}
+
+.po-about-title span {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding: 0 20px;
+}
+
+.po-about-icon {
+  width: auto;
+  text-align: center;
+  font-size: 2em;
+  border: 1px solid var(--black);
+  position: absolute;
+  border-radius: 100%;
+  padding: 30px 35px;
+  bottom: 11%;
+  left: -5%;
+}
+
+.po-about-desc {
+  width: 90%;
+  height: 11.3%;
+  margin: auto;
+  overflow-y: auto;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+
+.po-about-desc a {
+  color: var(--lightgrey);
+  text-decoration: underline;
+  transition: var(--short-transition);
+}
+
+.po-about-desc a:hover {
+  color: white;
+}
+
+.po-about-desc::-webkit-scrollbar {
+  width: 2px;
+}
+
+.po-about-desc::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.po-about-desc::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+.po-about-pic {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.po-about-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+}
+
+.po-about-info {
+  width: 50%;
+  height: 27%;
+  overflow-y: auto;
+  position: absolute;
+  text-align: center;
+  bottom: 13%;
+  right: 10%;
+  padding: 0 10px;
+  color: white;
+  background: transparent;
+  transition: all var(--long-transition);
+}
+
+.po-about-info:hover {
+  background: rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(3px);
+}
+
+.po-about-info::-webkit-scrollbar {
+  display: none;
+}
+
+.po-about-quote {
+  width: 100%;
+  height: fit-content;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.6em;
+  letter-spacing: 2px;
+}
+
+.po-mv-links {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.po-mv-links a {
+  color: white;
+  font-size: 1.3em;
+  margin: 0 20px;
+  transition: var(--short-transition);
+}
+
+.po-mv-links a:hover {
+  transform: scale(1.4);
+}
+
+/* ----------- ALLPOSTS ----------- */
+#po-allposts {
+  width: calc(100% - 400px);
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#po-allposts::-webkit-scrollbar {
+  display: none;
+}
+
+/* Pagination */
+.po-pagination {
+  font-size: 1.5em;
+  margin: 20px 50px 50px 0;
+}
+
+.po-pagination a {
+  color: inherit;
+  margin: 0 10px;
+}
+
+.po-1post {
+  width: 550px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 85% auto;
+  grid-auto-rows: auto auto;
+  gap: 10px;
+}
+
+/* Post Date */
+.po-date {
+  width: 100%;
+  padding-top: 5px;
+}
+
+.po-date a {
+  color: inherit;
+  font-family: var(--font1);
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1em;
+  position: relative;
+}
+
+.po-date a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4%;
+  background-image: linear-gradient(45deg, var(--color1), var(--color3), var(--color4));
+  height: 18%;
+  width: 108%;
+  padding: 0;
+  z-index: -1;
+  transition: var(--short-transition);
+}
+
+.po-date a:hover:before {
+  height: 100%;
+}
+
+.po-post-all {
+  width: 100%;
+  height: auto;
+  background: white;
+  border-top: 2px solid;
+  border-image: linear-gradient(45deg,
+      var(--color1),
+      var(--color3),
+      var(--color4)) 1;
+}
+
+/* Overall Post Body */
+.po-post-body {
+  width: 100%;
+  padding: 15px;
+}
+
+.po-post-body h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-family: var(--font1);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-transform: lowercase;
+  background: conic-gradient(from 70deg at 50%, var(--color1), var(--color4), var(--color3), var(--color1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.po-post-body a {
+  text-decoration: underline;
+  color: var(--grey);
+  transition: var(--short-transition);
+}
+
+.po-post-body a:hover {
+  color: inherit;
+}
+
+.po-post-body img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+/* Post Tail */
+.po-post-tail {
+  width: 100%;
+  border-top: 1px solid var(--lightgrey);
+  display: grid;
+  grid-template-columns: max-content max-content auto auto;
+  grid-template-rows: auto;
+  padding: 7px;
+}
+
+.po-post-tail a {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: inherit;
+  font-size: 0.9em;
+  transition: var(--short-transition);
+}
+
+.po-post-tail a:hover {
+  color: var(--grey);
+}
+
+/* Via Reblog */
+.po-via {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid var(--lightgrey);
+  padding: 0 10px 0 5px;
+}
+
+.po-userava {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+
+.po-userava img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.po-username {
+  line-height: 0.8em;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.po-username a {
+  text-transform: lowercase;
+  font-size: 1.3em;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: inherit;
+}
+
+/* Original Post */
+.po-original {
+  padding: 0 7px;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+}
+
+.po-original i {
+  background-image: linear-gradient(-90deg, var(--color4), var(--color3), var(--color1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid var(--lightgrey);
+  padding: 7px;
+  border-radius: 100%;
+}
+
+/* Notes Number */
+.po-notes {
+  width: 100%;
+  padding: 0 10px;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+}
+
+/* Source Post */
+.po-source {
+  padding: 0 10px;
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+}
+
+.po-source a:before {
+  content: '\ea92';
+  font-family: 'cappuccicons';
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+/* Reblog & Like Buttons */
+.po-buttons {
+  text-align: right;
+  padding: 0 10px;
+  grid-column: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.po-buttons a {
+  margin-left: 20px;
+  color: inherit;
+  transition: var(--short-transition);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.po-buttons .reblog:before {
+  content: '\ec36';
+  font-family: 'cappuccicons';
+}
+
+svg {
+  width: 12px;
+  height: auto;
+  display: inline-block;
+  overflow: visible;
+  transition: var(--short-transition);
+}
+
+svg:hover {
+  fill: var(--grey);
+}
+
+.like .liked+svg {
+  opacity: 1;
+}
+
+.like .liked+svg path {
+  fill: #ec5a5a;
+}
+
+.like .like_button {
+  position: relative;
+}
+
+.like .like_button iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Post Tags */
+.po-tags {
+  width: 100%;
+  height: auto;
+}
+
+.po-tags span {
+  font-weight: 600;
+}
+
+.po-tags a {
+  margin: 0 5px;
+  color: var(--grey);
+  transition: var(--short-transition);
+}
+
+.po-tags a:before {
+  content: '/';
+}
+
+.po-tags a:hover {
+  color: inherit;
+}
+
+/* ----------- TEXT ----------- */
+h2 {
+  margin: 0;
+  text-transform: lowercase;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+}
+
+blockquote {
+  margin: 10px;
+}
+
+blockquote div, blockquote p {
+  border-left: 1px solid var(--lightgrey);
+  padding-left: 20px;
+}
+
+code {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--super-lightgrey);
+  padding: 5px 10px;
+}
+
+/* ----------- VIDEO ----------- */
+.po-video {
+  text-align: center;
+}
+
+/* ----------- AUDIO ----------- */
+.playbutton {
+  position: relative;
+  margin-top: 45px;
+  margin-left: 44px;
+  z-index: 9;
+  width: 33px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.albumart img {
+  position: relative;
+  margin-top: -75px;
+  margin-left: 0px height:120px;
+  width: 120px;
+}
+
+.trackinfo {
+  margin-bottom: 10px;
+  background: var(--super-lightgrey);
+  top: -4px;
+  position: relative;
+  margin-left: 120px;
+  height: 120px;
+  margin-top: -120px;
+}
+
+.trackname {
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.artist {
+  text-align: center;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.album {
+  text-align: center;
+  font-style: italic;
+}
+
+.playcount {
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* ----------- QUOTE ----------- */
+.po-quote {
+  text-align: center;
+}
+
+.po-quote span {
+  font-family: var(--font1);
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+.po-quote-source {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+}
+
+.po-quote-source p:before {
+  content: '― ';
+}
+
+/* ----------- LINK ----------- */
+.po-1link {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background: var(--super-lightgrey);
+  padding: 15px 0;
+  border: 1px solid var(--lightgrey);
+  color: var(--black) !important;
+  text-decoration: none !important;
+  font-size: 1.2em;
+}
+
+.po-1link:before {
+  content: '\eb62';
+  font-family: 'cappuccicons';
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+
+.po-1link:hover {
+  background: var(--lightgrey);
+}
+
+/* ----------- CHAT ----------- */
+.po-1chat .odd {
+  width: auto;
+  background: var(--super-lightgrey);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 7px 7px 7px 0;
+  float: left;
+  margin: 10px 0;
+  clear: both;
+}
+
+.po-1chat .even {
+  width: auto;
+  background: conic-gradient(from -40deg at 50%, var(--color1), var(--color4), var(--color3), var(--color1));
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 7px 7px 0 7px;
+  float: right;
+  margin: 10px 0;
+  clear: both;
+}
+
+.po-1chat .label {
+  font-weight: bold;
+}
+
+/* ----------- ANSWER ----------- */
+.po-question {
+  width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(225deg, transparent 50%, var(--lightgrey) 50%),
+    linear-gradient(45deg, var(--super-lightgrey), var(--super-lightgrey)), linear-gradient(135deg, var(--super-lightgrey), var(--super-lightgrey)),
+    linear-gradient(225deg, transparent 25px, var(--super-lightgrey) 10px);
+  background-size: 35px 35px, 0 0, 0 0, 100% 100%;
+  background-position: 100% 0, 0 0, 100% 100%, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.po-asker-question {
+  margin-top: 20px;
+}
+
+.po-answer {
+  margin-top: 20px;
+}
+
+.po-answerer-answer {
+  margin-top: 20px;
+}
+
+/* ----------- PERMALINK ----------- */
+.po-permalink {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+ol.notes {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+li.note {
+  margin: 10px 0;
+}
+
+.po-permalink img.avatar {
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.po-permalink a {
+  color: var(--grey);
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  #po-sidebar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .po-title {
+    font-size: 4em;
+  }
+
+  .po-menu {
+    width: 60%;
+    margin: auto;
+    font-size: 1.5em;
+    left: 0;
+    right: 0;
+    top: 50%;
+    flex-direction: row;
+  }
+
+  .po-sideimage {
+    width: 60%;
+    height: 23%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  #po-sidequote {
+    right: 20%;
+    top: 23%;
+    font-size: 0.8em;
+  }
+
+  .po-sidescrip {
+    width: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .po-search {
+    width: 58%;
+    top: 33%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .po-search input {
+    width: 100%;
+  }
+
+  .pido-link {
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 2em;
+  }
+
+  #po-about {
+    width: 100%;
+  }
+  
+  .tabzclose {
+      left: 0;
+      right: unset;
+  }
+
+  .po-about-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .po-about-info {
+    width: 40%;
+    height: 16%;
+    bottom: 22%;
+  }
+
+  .po-mv-links a {
+    font-size: 1.6em;
+  }
+
+  .po-about-icon {
+    font-size: 2.2em;
+    left: -20px;
+  }
+
+  #po-allposts {
+    width: 100%;
+    height: auto;
+  }
+}

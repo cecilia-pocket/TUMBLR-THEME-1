@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="text:Link Title 1" content="home">
+  <meta name="text:Link URL 1" content="/" />
+  <meta name="text:Link Title 2" content="ask" />
+  <meta name="text:Link URL 2" content="/ask" />
+  <meta name="text:Link Title 3" content="tags" />
+  <meta name="text:Link URL 3" content="/tags" />
+  <meta name="text:Link Title 4" content="coming soon" />
+  <meta name="text:Link URL 4" content="/comingsoon" />
+
+  <title>{Title}</title>
+  <link rel="shortcut icon" href="{Favicon}">
+
+  <!-- STYLESHEET : PATR.ONUS THEME 2 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT ICONS : CAPPUCCICONS by Suiomi -->
+  <script src="//pull.cappuccicons.com/cpf.js"></script>
+
+  <script src="https://circletype.labwire.ca/dist/circletype.min.js"></script>
+
+  <!-- JS SCRIPT : TOOLTIPS by Malihu, Octomoosey
+  https://octomoosey.tumblr.com/post/128343672482/for-the-in-general-anon-xd-there-are-a-few
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+  <script>
+    (function($) {
+      $(document).ready(function() {
+        $("[title], a[title], img[title]").style_my_tooltips({
+          tip_follows_cursor: true,
+          tip_delay_time: 90,
+          tip_fade_speed: 500,
+          attribute: "title"
+        });
+      });
+    })(jQuery);
+  </script>
+  
+</head>
+
+<body>
+
+  <!---------- SIDEBAR ---------->
+  <div id="po-sidebar">
+
+    <div class="po-title">la<br>voie<br>lactée</div>
+
+    <div class="po-menu">
+      <a href="{text:Link URL 1}" title="{text:Link Title 1}"><i class="cp cp-home"></i></a>
+      <a href="{text:Link URL 2}" title="{text:Link Title 2}"><i class="cp cp-envelope"></i></a>
+      <a href="javascript:void(0)" title="about" class="tablink tabzact" onclick="openAlytut(event, 'po-about');"><i class="cp cp-id-card"></i></a>
+      <a href="{text:Link URL 3}" title="{text:Link Title 3}"><i class="cp cp-tags"></i></a>
+      <a href="{text:Link URL 4}" title="{text:Link Title 4}"><i class="cp cp-notes"></i></a>
+    </div>
+
+    <div class="po-sideimage"><img src="https://64.media.tumblr.com/2f6f7f844f7540d643779d33fcf6722e/ff5e5442e7ee4e45-33/s540x810/ef411c7cb764b792a3b0f3ef0da88ad3d45bed82.gif" alt="sidebar image"></div>
+
+    <form action="/search" method="get" class="po-search" name="searchform">
+      <input type="text" name="q" placeholder="search" id="po-si" />
+    </form>
+
+    <div id="po-sidequote">to eternity and beyond</div>
+
+    {block:Description}
+    <div class="po-sidescrip">{Description}</div>
+    {/block:Description}
+
+    <div class="pido-link">
+      <a href="https://piccasu.tumblr.com/" title="the other half"><i class="cp cp-rabbit"></i></a>
+    </div>
+
+  </div>
+
+  <!---------- ABOUT TAB ---------->
+  <div id="po-about" class="tabzcon alytut" style="display: none;">
+
+    <span onclick="this.parentElement.style.display='none'" class="tabzclose"></span>
+
+    <div class="po-about-underpage"></div>
+
+    <div class="po-about-title"><span>patr.onus</span></div>
+
+    <div class="po-about-icon"><i class="cp cp-shooting-star"></i></div>
+
+    <div class="po-about-desc">i'm affiliate to <a href="https://luomistaide.tumblr.com/">luomistaide</a>, a graphic resources blog for forums mainly. this blog is run by many other incredible creators. please go check it out! i have no other use for this textarea so i'm just going to say : stan enhypen and stan twice! drink water, stay safe and reach out to your loved ones.</div>
+
+    <div class="po-about-pic"><img src="https://64.media.tumblr.com/a4e419c042039ad2f0fca53ce8c2233a/296761bed1971ffd-f1/s400x600/d154fbb0058eae74193e6f135e64439f1998b6d2.gifv"></div>
+
+    <div class="po-about-info"><b>cécilia, 20, she/he/they, infp.</b> : i like very colorful edits, corgis, genshin impact, twice, coding, animal crossing, writing, mean girls, phở, filling my pinterest galleries, exo, haikyuu, scrolling on twitter, watching youtube videos and my bed.</div>
+
+    <div class="po-about-quote" style="transform: rotate(-90deg);
+    left: -43%;">long gone we lost the summer</div>
+
+    <div class="po-about-quote" style="transform: rotate(90deg);
+    left: 43%;">want to see you again, our shining summer</div>
+
+    <div class="po-mv-links"><a href="https://www.youtube.com/watch?v=CM4CkVFmTds" title="twice - i can't stop me"><i class="cp cp-star"></i></a> <a href="https://www.youtube.com/watch?v=c_e-IC0VwZM" title="the boyz - the stealer"><i
+          class="cp cp-star"></i></a> <a href="https://www.youtube.com/watch?v=Fc7-Oe0tj5k" title="enhypen - drunk-dazed"><i class="cp cp-star"></i></a></div>
+  </div>
+
+  <!---------- BLOG ENTRIES ---------->
+  <div id="po-allposts">
+    {block:Posts}
+
+    <!---------- ENTRY ---------->
+    <div class="po-1post ">
+
+      <div class="po-post-all">
+
+        <!-- PHOTO -->
+        {block:Photo}
+        <div class="po-post-body po-photo">
+          <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+          <img id="photo_{PostID}" src="{PhotoURL-500}" alt="{PhotoAlt}" />
+          </a>
+
+          {block:Caption}
+          <div class="po-caption">{Caption}</div>
+          {/block:Caption}
+        </div>
+        {/block:Photo}
+
+        <!-- PHOTOSET -->
+        {block:Photoset}
+        <div class="po-post-body po-photoset">
+          {Photoset}
+
+          {block:Caption}
+          <div class="po-caption">{Caption}</div>
+          {/block:Caption}
+        </div>
+        {/block:Photoset}
+
+        <!-- TEXT -->
+        {block:Text}
+        <div class="po-post-body po-text">
+          {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+
+          {Body}
+        </div>
+        {/block:Text}
+
+        <!-- QUOTE -->
+        {block:Quote}
+        <div class="po-post-body po-quote">
+          <span>{Quote}</span>
+
+          {block:Source}
+          <div class="po-quote-source">{Source}</div>
+          {/block:Source}
+        </div>
+        {/block:Quote}
+
+        <!-- LINK -->
+        {block:Link}
+        <div class="po-post-body po-link">
+          <a href="{URL}" class="po-1link" {Target}>{Name}</a>
+
+          {block:Description}
+          <div class="po-link-description">{Description}</div>
+          {/block:Description}
+        </div>
+        {/block:Link}
+
+        <!-- CHAT -->
+        {block:Chat}
+        <div class="po-post-body po-chat">
+          {block:Title}
+          <h1><a href="{Permalink}">{Title}</a></h1>
+          {/block:Title}
+
+          <div class="po-1chat">
+            {block:Lines}
+            <div class="{Alt} user_{UserNumber}">
+              {block:Label}
+              <span class="label">{Label}</span>
+              {/block:Label}
+              {Line}
+            </div>
+            {/block:Lines}
+          </div>
+        </div>
+        {/block:Chat}
+
+        <!-- AUDIO -->
+        {block:Audio}
+        <div class="po-post-body po-audio">
+          {block:AudioPlayer}
+          <div class="playbutton">{AudioPlayerGrey}</div>
+          {block:AlbumArt}<div class="albumart"><img src="{AlbumArtURL}"></div>{/block:AlbumArt}
+          <div class="trackinfo">
+            <div class="trackname">
+              {block:TrackName}{TrackName}{/block:TrackName}
+            </div>
+            <div class="artist">
+              {block:Artist}{Artist}{/block:Artist}
+            </div>
+            <div class="album">
+              {block:Album}{Album}{/block:Album}
+            </div>
+            <div class="playcount">
+              {block:PlayCount}Played: {PlayCount} times{/block:PlayCount}
+            </div>
+          </div>
+          {block:Caption}
+          <div class="po-caption">{Caption}</div>
+          {/block:Caption}
+          {/block:AudioPlayer}
+        </div>
+        {/block:Audio}
+
+        <!-- VIDEO -->
+        {block:Video}
+        <div class="po-post-body po-video">
+          {Video-400}
+
+          {block:Caption}
+          <div class="po-caption">{Caption}</div>
+          {/block:Caption}
+        </div>
+        {/block:Video}
+
+        <!-- ANSWER -->
+        {block:Answer}
+        <div class="po-post-body po-question-answer">
+          <div class="po-question" style="position: relative;">
+            <div class="po-asker">{Asker} sent:</div>
+            <div class="po-asker-question">{Question}</div>
+          </div>
+
+          {block:Answerer}
+          <div class="po-answer">
+            <div class="po-answerer">{Answerer} replied:</div>
+            <div class="po-answerer-answer">{Answer}</div>
+          </div>
+          {/block:Answerer}
+
+          <div class="po-replies">
+            {Replies}
+          </div>
+        </div>
+        {/block:Answer}
+
+
+        {block:Date}
+        <div class="po-post-tail">
+
+          {block:RebloggedFrom}
+          <div class="po-via">
+            <div class="po-userava"><img src="{ReblogParentPortraitURL-96}"></div>
+            <div class="po-username">via<br><a href="{ReblogParentURL}">{ReblogParentName}</a></div>
+          </div>
+          {block:RebloggedFrom}
+
+          {block:NotReblog}
+          <div class="po-original"><i class="cp cp-star" title="original post"></i></div>
+          {/block:NotReblog}
+
+          {block:NoteCount}
+          <div class="po-notes"><a href="{Permalink}" title="click for more details!">{NoteCountWithLabel}</a></div>
+          {/block:NoteCount}
+
+          {block:ContentSource}
+          <div class="po-source"><a href="{SourceURL}" title="{SourceURL}">source</a></div>
+          {/block:ContentSource}
+
+          
+          <div class="po-buttons">
+            <a class="reblog" href="{ReblogURL}" title="reblog" target="_blank"></a>
+            <a href="#" class="like" title="like">{LikeButton}
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
+            </a>
+          </div>
+          
+        </div>
+        {/block:Date}
+
+      </div>
+      
+      {block:Date}
+      <div class="po-date"><a href="{Permalink}">{ShortMonth} {DayOfMonth} {Year}</a></div>
+      {/block:Date}
+
+      {block:HasTags}
+      <div class="po-tags">
+        <span>directories:</span> {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}
+      </div>
+      {/block:HasTags}
+
+      {block:PermalinkPage}
+      {block:PostNotes}<div class="po-permalink">{PostNotes}</div>{/block:PostNotes}
+      {/block:PermalinkPage}
+
+    </div>
+
+    {/block:Posts}
+    
+    <div class="po-pagination">{block:PreviousPage}<a href="{PreviousPage}" title="previous"><i class="cp cp-chevron-left"></i></a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}" title="next"><i
+          class="cp cp-chevron-right"></i></a>{block:NextPage}</div>
+    
+  </div>
+
+  <!---------- SCRIPT SIDEBAR QUOTE ---------->
+  <script>
+    function send() {
+      document.searchform.submit()
+    }
+
+    new CircleType(document.getElementById('po-sidequote'));
+  </script>
+
+</body>
+
+<!---------- SCRIPT TABS ---------->
+<script>
+  function openAlytut(evt, alytutName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("alytut");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" tabzact", "");
+    }
+    document.getElementById(alytutName).style.display = "flex";
+    evt.currentTarget.className += " tabzact";
+  }
+</script>
+
+</html>
